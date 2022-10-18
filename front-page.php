@@ -315,11 +315,12 @@ get_header(null, $args);
       <div class="card">
         <span class="animated" data-aos="animated" data-aos-duration="1200"></span>
         <div class="card-header" id="headingOne">
-
-          <button class="btn btn-collapse d-flex align-items-center " type="button" data-toggle="collapse" data-target="#collapseOne">
-            <i class="fas fa-question"></i>
-            <p>Ile kosztuje stworzenie strony lub sklepu internetowego?</p>
-          </button>
+          <h3 class="mb-0">
+            <button class="btn btn-collapse d-flex align-items-center " type="button" data-toggle="collapse" data-target="#collapseOne">
+              <i class="fas fa-question"></i>
+              Ile kosztuje stworzenie strony lub sklepu internetowego?
+            </button>
+          </h3>
 
         </div>
 

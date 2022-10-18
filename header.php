@@ -40,13 +40,13 @@
         <div class="col-sm-12">
           <ul class="nav d-flex justify-content-around">
             <li class="nav-item">
-              <a class="nav-link delay-1" href="<?php echo get_home_url() ?>">O nas</a>
+              <a class="nav-link nav-link--desktop" href="<?php echo get_home_url() ?>">O nas</a>
             </li>
 
 
             <li class="nav-item">
               <div class="dropdown">
-                <a class="nav-link  delay-2 " href="#" role="button">
+                <a class="nav-link  nav-link--desktop" href="#" role="button">
                   Nasza oferta <i class="fas fa-caret-square-down"></i>
                 </a>
 
@@ -59,10 +59,10 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link delay-3" href="<?php echo get_home_url() ?>/portfolio">Portfolio</a>
+              <a class="nav-link nav-link--desktop" href="<?php echo get_home_url() ?>/portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link delay-4" href="<?php echo get_home_url() ?>/kontakt">Kontakt</a>
+              <a class="nav-link nav-link--desktop" href="<?php echo get_home_url() ?>/kontakt">Kontakt</a>
             </li>
           </ul>
         </div>
@@ -73,7 +73,7 @@
           <a class="nav-link" href="<?php echo get_home_url() ?>">O nas</a>
           <div class="dropdown">
 
-            <a class="nav-link  delay-2 " href="#" role="button" onclick="toggleDropDownMobileOferta()">
+            <a class="nav-link" href="#" role="button" onclick="toggleDropDownMobileOferta()">
               Nasza oferta <i class="fas fa-caret-square-down align-self-center"></i>
             </a>
 

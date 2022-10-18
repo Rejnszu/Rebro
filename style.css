@@ -1,7 +1,7 @@
 /*
 Theme Name: ReBro
 Text Domain: ReBro
-Version: 1.0
+Version: 1.4
 Description: ReBro
 Author: ReBro (Piotr Brokowski & Łukasz Rejnsz)
 
@@ -263,10 +263,19 @@ a:hover {
   color: rgb(255, 255, 255);
   font-size: 1.5rem;
   font-weight: 600;
-
-  transition: all 0.3s;
+  
+  transition: all 0.4s;
   z-index: 5;
   border-radius: 40px;
+}
+.nav-link--desktop{
+  color:white;
+  transform: translateX(-400px);
+  opacity: 0;
+}
+.nav-link--desktop.fade-in{
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .nav-link:hover,
@@ -442,101 +451,6 @@ a:hover {
 }
 /* --------------------------------- Responsywne menu koniec ------------------------------------------- */
 
-/* ANIMACJA WJAZDU HEADEROWYCH LINKÓW */
-@keyframes moveInRight1 {
-  0% {
-    opacity: 0;
-    transform: translateX(-20rem);
-  }
-  20% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInRight2 {
-  0% {
-    opacity: 0;
-    transform: translateX(-20rem);
-  }
-  40% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInRight3 {
-  0% {
-    opacity: 0;
-    transform: translateX(-20rem);
-  }
-  60% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInRight4 {
-  0% {
-    opacity: 0;
-    transform: translateX(-20rem);
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes moveInRight5 {
-  0% {
-    opacity: 0;
-    transform: translateX(-20rem);
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.delay-1 {
-  animation-name: moveInRight1;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
-.delay-2 {
-  animation-name: moveInRight2;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
-.delay-3 {
-  animation-name: moveInRight3;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
-.delay-4 {
-  animation-name: moveInRight4;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
-
-.delay-5 {
-  animation-name: moveInRight5;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-}
 
 /* ------------------FRONT PAGE------------------*/
 .main {
@@ -595,6 +509,13 @@ a:hover {
   width: 100%;
   height: auto;
 }
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .section3 {
+      background-attachment: initial;
+    }
+  }
+}
 .section3_inside {
   margin-top: 8rem;
   margin-bottom: 8rem;
@@ -645,8 +566,8 @@ a:hover {
   bottom: 0.5rem;
   left: 45%;
   background-color: rgba(32, 15, 184, 0.9);
-  border-radius: 40%;
-  padding: 0.3rem;
+  border-radius: 50%;
+  padding: 0.3rem 0.5rem 0.4rem 0.5rem;
 }
 @media (max-width: 769px) {
   .img-back {
@@ -722,12 +643,10 @@ a:hover {
   font-weight: 1rem;
   color: var(--dodatkowy);
 }
-.section6 p {
-  margin: 0;
-  padding: 0;
-}
+
 .btn-collapse {
   padding: 10px 0 10px 0;
+  font-weight: 600;
 }
 .btn-collapse:active,
 .btn-collapse:focus {
@@ -756,19 +675,7 @@ a:hover {
   background-color: white;
 }
 
-/* .animation {
-  animation: fading 2s linear forwards;
-}
 
-@keyframes fading {
-  0% {
-    width: 100%;
-  }
-
-  100% {
-    width: 0;
-  }
-} */
 /* FOOTER */
 footer {
   background-color: #d7d7d7;
@@ -911,12 +818,7 @@ footer {
     font-size: 1.5rem;
   }
 }
-  /* .strony_background{
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='0.5' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='3' height='3' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cuse fill='%23fcfcfc' href='%23s' y='2'/%3E%3Cuse fill='%23fcfcfc' href='%23s' x='1' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s' x='2' y='2'/%3E%3Cuse fill='%23fafafa' href='%23s'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='2'/%3E%3Cuse fill='%23f7f7f7' href='%23s' x='1' y='1'/%3E%3C/pattern%3E%3Cpattern id='b' width='7' height='11' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s'/%3E%3Cuse href='%23s' y='5' /%3E%3Cuse href='%23s' x='1' y='10'/%3E%3Cuse href='%23s' x='2' y='1'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='8'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='5' y='2'/%3E%3Cuse href='%23s' x='5' y='6'/%3E%3Cuse href='%23s' x='6' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='h' width='5' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cg fill='%23f5f5f5'%3E%3Cuse href='%23s' y='5'/%3E%3Cuse href='%23s' y='8'/%3E%3Cuse href='%23s' x='1' y='1'/%3E%3Cuse href='%23s' x='1' y='9'/%3E%3Cuse href='%23s' x='1' y='12'/%3E%3Cuse href='%23s' x='2'/%3E%3Cuse href='%23s' x='2' y='4'/%3E%3Cuse href='%23s' x='3' y='2'/%3E%3Cuse href='%23s' x='3' y='6'/%3E%3Cuse href='%23s' x='3' y='11'/%3E%3Cuse href='%23s' x='4' y='3'/%3E%3Cuse href='%23s' x='4' y='7'/%3E%3Cuse href='%23s' x='4' y='10'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='17' height='13' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cg fill='%23f2f2f2'%3E%3Cuse href='%23s' y='11'/%3E%3Cuse href='%23s' x='2' y='9'/%3E%3Cuse href='%23s' x='5' y='12'/%3E%3Cuse href='%23s' x='9' y='4'/%3E%3Cuse href='%23s' x='12' y='1'/%3E%3Cuse href='%23s' x='16' y='6'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='19' height='17' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cg fill='%23ffffff'%3E%3Cuse href='%23s' y='9'/%3E%3Cuse href='%23s' x='16' y='5'/%3E%3Cuse href='%23s' x='14' y='2'/%3E%3Cuse href='%23s' x='11' y='11'/%3E%3Cuse href='%23s' x='6' y='14'/%3E%3C/g%3E%3Cg fill='%23efefef'%3E%3Cuse href='%23s' x='3' y='13'/%3E%3Cuse href='%23s' x='9' y='7'/%3E%3Cuse href='%23s' x='13' y='10'/%3E%3Cuse href='%23s' x='15' y='4'/%3E%3Cuse href='%23s' x='18' y='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='53' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cg fill='%23200FB8'%3E%3Cuse href='%23s' x='2' y='5'/%3E%3Cuse href='%23s' x='16' y='38'/%3E%3Cuse href='%23s' x='46' y='42'/%3E%3Cuse href='%23s' x='29' y='20'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='59' height='71' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cg fill='%23200FB8'%3E%3Cuse href='%23s' x='33' y='13'/%3E%3Cuse href='%23s' x='27' y='54'/%3E%3Cuse href='%23s' x='55' y='55'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='g' width='139' height='97' patternUnits='userSpaceOnUse' patternTransform='scale(6.85) translate(-854.01 -640.51)'%3E%3Cg fill='%23200FB8'%3E%3Cuse href='%23s' x='11' y='8'/%3E%3Cuse href='%23s' x='51' y='13'/%3E%3Cuse href='%23s' x='17' y='73'/%3E%3Cuse href='%23s' x='99' y='57'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23b)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23h)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23c)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23d)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23e)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23f)' width='100%25' height='100%25'/%3E%3Crect fill='url(%23g)' width='100%25' height='100%25'/%3E%3C/svg%3E");
 
-  background-size: cover;
-} */
 
   /* --------------------------------timeline start-------------------------- */
   .timeline-horizontal::before {
@@ -1081,23 +983,24 @@ footer {
   /* --------------Time line mobilny koniec*/
 
   .rounded-card {
-    border: 0.55px solid rgba(128, 128, 128, 0.514);
-    border-radius: 17px;
+    border: 0.55px solid var(--glowny);
+    border-radius: 10px;
     margin-bottom: 1rem;
     margin-top: 4rem;
     height: 82%;
-    box-shadow: inset 0 0 1rem black;
-    transition: all 1s;
+    /* box-shadow: inset 0 0 1rem black; */
+    box-shadow: 3px 5px 10px var(--dodatkowy);
+    transition: all 0.5s;
   }
   .rounded-card:hover {
-    box-shadow: inset 0 0 2rem black;
+    box-shadow: inset 0 0 10px var(--dodatkowy);
   }
 
   .rounded-card i {
     position: relative;
     top: -1rem;
     font-size: 28px;
-    border: black solid 1px;
+    border: var(--glowny) solid 1px;
     border-radius: 33px;
     padding: 14px;
     background-color: white;

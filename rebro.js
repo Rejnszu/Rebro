@@ -18,5 +18,9 @@ AOS.init({
   duration: 900,
   once: true,
 });
+console.log("test");
+const navLinkDesktop = document.querySelectorAll(".nav-link--desktop");
 
-
+Array.from(navLinkDesktop).forEach((link, i) => {
+  setTimeout(() => link.classList.add("fade-in"), (i + 0.5) * 400);
+});
